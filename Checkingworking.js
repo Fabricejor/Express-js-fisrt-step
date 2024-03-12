@@ -8,7 +8,7 @@ const checkWorkingHours = (req, res, next) => {
     const minuteOfDay = date.getMinutes();
     console.log(dayOfWeek);
     // Vérifier si c'est un jour ouvrable (du lundi au vendredi) et si c'est entre 9h et 17h
-    if (dayOfWeek >= 1 && dayOfWeek <= 5 && hourOfDay >= 9 && hourOfDay < 17) {
+    if (dayOfWeek >= 1 && dayOfWeek <= 5 && hourOfDay >= 9 && hourOfDay < 23) {
         // Si c'est pendant les heures de travail, passer au prochain middleware ou à la route suivante
         console.log(dayOfWeek);
         next();
